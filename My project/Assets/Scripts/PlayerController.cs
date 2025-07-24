@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
-    private int obstacle_num=60;
+    public int score = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,11 +25,12 @@ public class PlayerController : MonoBehaviour
         Vector3 movemont = new Vector3(horizontal, 0, vertical);
 
         rb.AddForce(movemont * speed);
+        Console.WriteLine(score);
 
-        if (obstacle_num == 0)
+        if (score == 100)
         {
             Debug.Log("≈¨∏ÆæÓ");
-            obstacle_num--;
+            score++;
         }
     }
 
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("æ∆¿Ã≈€ »πµÊ");
             other.gameObject.SetActive(false);
+            score += 10;
         }
     }
 
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("√Êµπ");
             other.gameObject.SetActive(false);
-            obstacle_num--;
+            score++;
         }
     }
 }
