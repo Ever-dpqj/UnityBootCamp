@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
+    private int obstacle_num=60;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +24,12 @@ public class PlayerController : MonoBehaviour
         Vector3 movemont = new Vector3(horizontal, 0, vertical);
 
         rb.AddForce(movemont * speed);
+
+        if (obstacle_num == 0)
+        {
+            Debug.Log("클리어");
+            obstacle_num--;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,21 +39,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log("아이템 획득");
             other.gameObject.SetActive(false);
         }
-        //if (other.gameObject.CompareTag("Obstacle"))
-        //{
-        //    Debug.Log("충돌");
-        //    speed--;
-        //    other.gameObject.SetActive(false);
-        //}
-
     }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("충돌");
-            speed--;
             other.gameObject.SetActive(false);
+            obstacle_num--;
         }
     }
 }
