@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 303429516}
   - component: {fileID: 303429519}
   - component: {fileID: 303429518}
-  - component: {fileID: 303429517}
+  - component: {fileID: 303429520}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -413,23 +413,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: -210}
   m_SizeDelta: {x: 900, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &303429517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303429515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b6e24763c9ac6448f5434e5968d38a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  playerController: {fileID: 0}
 --- !u!114 &303429518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,7 +443,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 60
-    m_Alignment: 7
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -472,6 +458,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303429515}
   m_CullTransparentMesh: 1
+--- !u!114 &303429520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303429515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc3ea078ee3a9048b001839db2e013c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 303429518}
+  spawner: {fileID: 2144981993}
 --- !u!1 &566268471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefeb: {fileID: 4112069080615454320, guid: fee832ee418bec34a8b66540a7894761, type: 3}
+  Score: 0
+  Level: 1
 --- !u!4 &2144981994
 Transform:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public class ObjectController : MonoBehaviour
             Destroy(gameObject);
             spawner.ScoreDown();
         }
-        falling_speed = 2.5f + Level;
+        falling_speed = 2.5f + Level*2;
         
     }
 }
