@@ -4,16 +4,19 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - s1
+  - Enemy
+  - FxTemporaire
+  - Bullet
+  - Spawner
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Red
+  - 
   - Water
   - UI
-  - Yellow
-  - asdasd
+  - 
+  - 
   - 
   - 
   - 
