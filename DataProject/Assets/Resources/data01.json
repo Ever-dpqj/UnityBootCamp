@@ -1,0 +1,12 @@
+{
+  "hp": 100,
+  "atk": 50,
+  "def": 5,
+  "items": [ "potion(R)", "potion(B)" ],
+  "position": {
+    "x": 1,
+    "y": 5
+  },
+  "Quest": null,
+  "isDead": false
+}
